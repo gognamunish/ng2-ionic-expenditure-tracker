@@ -3,9 +3,9 @@
 
 ## Screenshots
 | Menu        | Dashboard  |
-| ![alt tag](https://github.com/gognamunish/ionic-expenditure-tracker/blob/master/XpenditureTracker/resources/github/home.png)
-      | ![alt tag](https://github.com/gognamunish/ionic-expenditure-tracker/blob/master/XpenditureTracker/resources/github/menu.png)
-| 
+|![alt tag](https://github.com/gognamunish/ionic-expenditure-tracker/blob/master/XpenditureTracker/resources/github/home.png)
+      | ![alt tag](https://github.com/gognamunish/ionic-expenditure-tracker/blob/master/XpenditureTracker/resources/github/menu.png)|
+
 
 ![alt tag](https://github.com/gognamunish/ionic-expenditure-tracker/blob/master/XpenditureTracker/resources/github/home.png)
 
