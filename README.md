@@ -7,10 +7,9 @@
 ```
 ionic build ios
 ionic build android
+```
 
 Refer to <a href="https://ionicframework.com/docs/v2/setup/deploying/"> https://ionicframework.com/docs/v2/setup/deploying/ </a> for detailed steps
-
-```
 
 ### Accessing using Browser
 ionic serve
