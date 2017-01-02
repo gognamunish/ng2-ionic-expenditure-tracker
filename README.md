@@ -3,8 +3,8 @@
 
 ## Screenshots
 | Menu        | Dashboard  |
-|<img src="https://github.com/gognamunish/ionic-expenditure-tracker/blob/master/XpenditureTracker/resources/github/home.png" height="60%" width="60%" />
-      | ![alt tag](https://github.com/gognamunish/ionic-expenditure-tracker/blob/master/XpenditureTracker/resources/github/menu.png)|
+|<img src="https://github.com/gognamunish/ionic-expenditure-tracker/blob/master/XpenditureTracker/resources/github/home.png" height="40%" width="40%" />
+      | <img src="https://github.com/gognamunish/ionic-expenditure-tracker/blob/master/XpenditureTracker/resources/github/menu.png" height="40%" width="40%" />  |
 
 
 ![alt tag](https://github.com/gognamunish/ionic-expenditure-tracker/blob/master/XpenditureTracker/resources/github/home.png)
