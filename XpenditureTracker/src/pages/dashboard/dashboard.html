@@ -1,0 +1,125 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title> Xpenditure Tracker</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+
+  Login <button ion-button color="primary" block (click) ="auth.login()">Login</button>
+
+
+  <div *ngIf="newInProgress === true">
+
+<form [formGroup]="expenditureForm"  (ngSubmit)="saveExpenditure(expenditureForm.value)">
+  <ion-card>
+  <ion-card-header>
+    Add New Expenditure
+  </ion-card-header>
+  <ion-card-content>
+  <ion-list>
+
+     <ion-item>
+      <ion-label>Category</ion-label>
+      <ion-select formControlName="category" required>
+        <ion-option value="GENERAL">GENERAL</ion-option>
+        <ion-option value="GROCERY">GROCERY</ion-option>
+        <ion-option value="GARMENTS">GARMENTS</ion-option>
+        <ion-option value="BILLS">BILLS</ion-option>
+        <ion-option value="RENT">RENT</ion-option>
+        <ion-option value="EDUCATION">EDUCATION</ion-option>
+        <ion-option value="GIFT">GIFT</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Amount</ion-label>
+      <ion-input type="number" formControlName="amount" required placeholder="Enter Amount in SGD"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Description</ion-label>
+      <ion-input type="textarea" formControlName="description" required placeholder="Provide Description"> </ion-input>
+    </ion-item>
+   
+
+  </ion-list>
+  </ion-card-content>
+  </ion-card>
+
+   <div padding>
+
+     <ion-grid>
+  <ion-row>
+    <ion-col width-50>
+      <button ion-button color="primary" block>
+      <ion-icon name="checkmark-circle"></ion-icon>&#160;Save</button>
+    </ion-col>
+     <ion-col width-50><button ion-button color="light" block (click)="cancelNew()"> <ion-icon name="close-circle"></ion-icon>&#160;Cancel</button></ion-col>
+  </ion-row>
+</ion-grid>
+   
+  </div>
+  </form>
+
+  </div>  
+
+<div *ngIf="newInProgress === false">
+
+<div padding>
+ 
+ <button ion-button full (click) ="addNewExpenditure()" ><ion-icon name="add-circle" ></ion-icon>&#160; Add New Expenditure</button>
+
+
+  <ion-segment [(ngModel)]="daysToConsider" (ionChange)="filterBySegment()">
+    <ion-segment-button value="Today">
+      Last 24 hrs
+    </ion-segment-button>
+    <ion-segment-button value="This Week">
+      Last 7 days
+    </ion-segment-button>
+    <ion-segment-button value="This Month">
+      Last 30 days
+    </ion-segment-button>
+     <ion-segment-button value="All Time">
+      All Time
+    </ion-segment-button>
+  </ion-segment>
+</div>
+
+
+ <div [ngSwitch]="daysToAdd">
+    <ion-list *ngSwitchDefault>
+    <ion-item-sliding *ngFor="let expenditure of expenditures">
+        <ion-item>
+            <ion-avatar item-right>
+              <ion-badge item-right>${{expenditure.amount}}</ion-badge> 
+            </ion-avatar>
+            <h3>{{expenditure.category}}</h3>
+            <h2>{{expenditure.description}}</h2>
+            <small>by {{expenditure.created_by}} on {{expenditure.created_on | date : 'mediumDate'}}</small>
+        </ion-item>
+            <ion-item-options>
+                <button ion-button color="danger" icon-left (click)="deleteExpenditure(expenditure)">
+                  <ion-icon name="trash"></ion-icon>
+                  Delete
+                </button>
+            </ion-item-options>  
+        </ion-item-sliding>
+    </ion-list> 
+ 
+
+    <div style="position: absolute;bottom: 0;float:right">
+          <ion-item style="background:lightgrey;">
+          <ion-label>Total:  SGD {{recentItemsTotal}}</ion-label>
+        </ion-item>
+    </div> 
+    
+ </div>
+ 
+ </div>
+</ion-content>

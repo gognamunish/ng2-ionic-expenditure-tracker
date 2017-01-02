@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Search Expenditures</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+ <ion-item>
+      <ion-label>By Category</ion-label>
+      <ion-select (ionChange)="filterCategory()" [(ngModel)]="category">
+        <ion-option value="GENERAL">GENERAL</ion-option>
+        <ion-option value="GROCERY">GROCERY</ion-option>
+        <ion-option value="GARMENTS">GARMENTS</ion-option>
+        <ion-option value="BILLS">BILLS</ion-option>
+        <ion-option value="RENT">RENT</ion-option>
+        <ion-option value="EDUCATION">EDUCATION</ion-option>
+        <ion-option value="GIFT">GIFT</ion-option>
+      </ion-select>
+    </ion-item>
+
+<ion-list>
+    <ion-item-sliding *ngFor="let expenditure of expenditures">
+        <ion-item>
+            <ion-avatar item-right>
+              <ion-badge item-right color="dark">${{expenditure.amount}}</ion-badge> 
+            </ion-avatar>
+            <h3>{{expenditure.category}}</h3>
+            <h2>{{expenditure.description}}</h2>
+            <small>by {{expenditure.created_by}} on {{expenditure.created_on | date : 'shortDate'}}</small>
+        </ion-item>
+        </ion-item-sliding>
+    </ion-list> 
+
+      <div style="position: absolute;bottom: 0;float:right" *ngIf="categoryTotal > 0 ">
+           <ion-item style="background:lightgrey;">
+            <ion-label> Category Total:  SGD {{categoryTotal}}</ion-label>
+          </ion-item>
+      </div> 
+
+</ion-content>

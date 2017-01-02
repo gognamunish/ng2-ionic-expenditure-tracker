@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Farzi Aadmi</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>Check out on me :)</ion-list-header>
+    <ion-item>
+      <ion-icon name="logo-twitter" item-left></ion-icon>
+      <button ion-button clear (click)="openTwitter()"  >View Timeline @MunishGogna</button>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="mail" item-left></ion-icon>
+      <button ion-button clear (click)="email()"  >Email gognamunish@gmail.com</button>
+    </ion-item>
+     <ion-item>
+      <ion-icon name="text" item-left ></ion-icon>
+      <button ion-button clear (click)="sms()"  >SMS 98312848</button>
+
+    </ion-item>
+    <ion-item>
+      <ion-icon name="call" item-left ></ion-icon>
+      <button ion-button clear (click) ="call()">Call 98312848</button>
+
+    </ion-item>
+  </ion-list>
+</ion-content>

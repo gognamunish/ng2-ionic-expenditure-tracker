@@ -1,0 +1,50 @@
+
+
+<ion-menu [content]="content" >
+  <ion-header>
+     <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+ <ion-content>
+
+   
+    <div>
+    <ion-item> 
+      <ion-card *ngIf="auth.authenticated() === true">
+      <ion-item>
+        <ion-avatar item-left *ngIf="auth.user">
+          <img src="{{auth.user.picture}}">
+        </ion-avatar>
+          <h3>{{auth.user.nickname}}</h3>
+          <h2>{{auth.user.email}}</h2>
+          <p>Live in Present and die for future</p>
+      </ion-item>
+    
+      </ion-card>
+    </ion-item>
+
+    <ion-list>
+      <button  menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+      <ion-icon name="home" *ngIf="p.title === 'Home'"></ion-icon>  
+      <ion-icon name="search" *ngIf="p.title === 'Search'"></ion-icon>  
+      <ion-icon name="person" *ngIf="p.title === 'About'"></ion-icon>    
+         {{p.title}}
+      </button>
+    </ion-list>
+
+    </div>
+
+    
+  </ion-content>
+  
+</ion-menu>
+
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false" ></ion-nav>
+
+
+
