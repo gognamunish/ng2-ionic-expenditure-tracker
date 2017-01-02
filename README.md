@@ -3,7 +3,7 @@
 
 ## Screenshots
 | Menu        | Dashboard  |
-|![alt tag](https://github.com/gognamunish/ionic-expenditure-tracker/blob/master/XpenditureTracker/resources/github/home.png)
+|<img src="https://github.com/gognamunish/ionic-expenditure-tracker/blob/master/XpenditureTracker/resources/github/home.png" height="60%" width="60%" />
       | ![alt tag](https://github.com/gognamunish/ionic-expenditure-tracker/blob/master/XpenditureTracker/resources/github/menu.png)|
 
 
