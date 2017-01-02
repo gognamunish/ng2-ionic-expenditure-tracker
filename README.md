@@ -1,7 +1,7 @@
 # ionic-expenditure-tracker
 > An Ionic App backed by Firebase database meant for tracking Expenditure (beginners)
 
-<img src="https://github.com/gognamunish/ionic-expenditure-tracker/blob/master/XpenditureTracker/resources/github/home.png" height="40%" width="40%" />
+<img src="https://github.com/gognamunish/ionic-expenditure-tracker/blob/master/XpenditureTracker/resources/github/home.png" height="70%" width="70%" />
 
 ### iOS / Android Packaging
 ```
