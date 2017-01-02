@@ -8,12 +8,13 @@
 ionic build ios
 ionic build android
 
-Refer to https://ionicframework.com/docs/v2/setup/deploying/ for detailed steps
+Refer to <a href="https://ionicframework.com/docs/v2/setup/deploying/"> https://ionicframework.com/docs/v2/setup/deploying/ </a> for detailed steps
 
 ```
 
 ### Accessing using Browser
 ionic serve
+
 http://localhost:8100/
 
 
