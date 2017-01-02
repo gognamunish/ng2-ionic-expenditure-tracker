@@ -3,7 +3,7 @@
 
 <img src="https://github.com/gognamunish/ionic-expenditure-tracker/blob/master/XpenditureTracker/resources/github/home.png" height="40%" width="40%" />
 
-### iOS Packaging
+### iOS / Android Packaging
 ```
 ionic build ios
 ionic build android
