@@ -11,7 +11,8 @@ declare var Auth0Lock: any;
 @Injectable()
 export class AuthService {
 
-  lock = new Auth0Lock('714k6LHmMy4b9pfBJmX9J87HB6wHQZdM', 'gognamunish.auth0.com', {
+// replace xxx with your key and domain
+  lock = new Auth0Lock('xxxxxxxx', 'xxxxx', {
     auth: {
       redirect: false,
       params: {
