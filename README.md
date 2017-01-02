@@ -1,8 +1,13 @@
 # ionic-expenditure-tracker
-An Ionic App backed by Firebase database meant for tracking Expenditure (beginners)
+> An Ionic App backed by Firebase database meant for tracking Expenditure (beginners)
+
+## Screenshots
+| Menu        | Dashboard  |
+| ![alt tag](https://github.com/gognamunish/ionic-expenditure-tracker/blob/master/XpenditureTracker/resources/github/home.png)
+      | ![alt tag](https://github.com/gognamunish/ionic-expenditure-tracker/blob/master/XpenditureTracker/resources/github/menu.png)
+| 
 
 ![alt tag](https://github.com/gognamunish/ionic-expenditure-tracker/blob/master/XpenditureTracker/resources/github/home.png)
-![alt tag](https://github.com/gognamunish/ionic-expenditure-tracker/blob/master/XpenditureTracker/resources/github/menu.png)
 
 ### iOS Packaging
 ```
