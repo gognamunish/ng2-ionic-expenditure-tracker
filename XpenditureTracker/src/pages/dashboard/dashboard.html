@@ -10,9 +10,6 @@
 <ion-content>
 
 
-  Login <button ion-button color="primary" block (click) ="auth.login()">Login</button>
-
-
   <div *ngIf="newInProgress === true">
 
 <form [formGroup]="expenditureForm"  (ngSubmit)="saveExpenditure(expenditureForm.value)">
